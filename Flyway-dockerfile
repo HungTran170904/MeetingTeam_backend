@@ -1,0 +1,4 @@
+FROM flyway/flyway
+COPY /src/main/resources/migration /flyway/sql
+COPY /src/main/resources/application-docker.properties /flyway/conf/flyway.conf
+CMD ["migrate"]
